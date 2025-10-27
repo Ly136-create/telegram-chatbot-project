@@ -38,32 +38,111 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(random.choice(responses))
         return
     
-     # PNC informations
-    if "pnc" in user_text or "passerelles numériques Cambodia" in user_text or "what is pnc" in user_text or "tell me about pnc" in user_text or "information about pnc" in user_text or "about pnc" in user_text or "pnc Cambodia" in user_text or "Passerelles Numériques Cambodia" in user_text:
+    #  # PNC informations
+    # if "pnc" in user_text or "passerelles numériques Cambodia" in user_text or "what is pnc" in user_text or "tell me about pnc" in user_text or "information about pnc" in user_text or "about pnc" in user_text or "pnc Cambodia" in user_text or "Passerelles Numériques Cambodia" in user_text:
+    #     await update.message.reply_text(
+    #         "Launched in 2005 in Phnom Penh, Passerelles Numériques Cambodia (PNC) offers a 2-year  IT training program in IT, based on a holistic approach including technical skills and professional development (or soft skills). While at PNC, the basic needs of our students (housing, food, medical care) are covered."
+    #     )
+    #     return
+
+    # elif "passerelles numériques" in user_text or "What is passerelles numériques" in user_text or "passerelles numeriques" in user_text or "what is passerelles numeriques?" in user_text:
+    #     await update.message.reply_text(
+    #         "Passerelles Numériques is French non-profit organization, created in 2005, witch intends to enable the most under priviliged young people access to higher education and skilled employment in the promising sector of Inormation Technology (IT)."
+    #     )
+    #     return
+    
+    # elif "What is training program at pnc?" in user_text or "training program at pnc" in user_text or "tell me about training program at pnc" in user_text or "information about training program at pnc" in user_text or "training program pnc" in user_text:
+    #     await update.message.reply_text(
+    #         "Paserelles numeriques has implelemented an innovative and comprehensive training program in each of its centers, focused on long-term employability. An associate degree in Computer Sience, passerelles numeriques in Cambodia (PNC) offers a 2-year full time training in IT with a major in software Development, meeting the needs of local companies in the IT industry, for underprivileged Cambodian youths. PNC is registered with the Cambodian Ministry of Education, Youth and Sports. At the end of the training, students receive an Assocciate Computer Sience with a major in software Development, as well as a Passerelles Numériques certificate. Throughout their traning, students benefit from a comprehensive professional and technical skills training, and strong support for their professional integration. They also participate in extra-curricular and personal development activities."
+    #     )
+    #     return
+    
+    #  # --- 🏫 PNC Values ---
+    # elif "What are the core values of PNC?" in user_text or "core values of pnc" in user_text or "PNC core values" in user_text or "values of passerelles numériques Cambodia" in user_text or "values of pnc" in user_text:
+    #     await update.message.reply_text(
+    #         "Passerelles Numériques Cambodia (PNC) — like all Passerelles Numériques centers — is guided by five strong core values that shape the behavior, mindset, and teamwork of every student and staff member.Here are the PNC core values:"
+    #         "1.Respec: We treat everyone with kindness, fairness, and dignity. Respect is the foundation of teamwork and good communication."
+    #     )
+    #     return
+
+    # --- 🏫 PNC Information and Values ---
+    if any(keyword in user_text for keyword in [
+        "pnc",
+        "passerelles numériques cambodia",
+        "passerelles numeriques cambodia",
+        "what is pnc",
+        "tell me about pnc",
+        "information about pnc",
+        "about pnc",
+        "pnc cambodia"
+    ]):
         await update.message.reply_text(
-            "Launched in 2005 in Phnom Penh, Passerelles Numériques Cambodia (PNC) offers a 2-year  IT training program in IT, based on a holistic approach including technical skills and professional development (or soft skills). While at PNC, the basic needs of our students (housing, food, medical care) are covered."
+            "🌐 *Passerelles Numériques Cambodia (PNC)*  launched in 2005 in Phnom Penh  "
+            "offers a 2-year IT training program based on a *holistic approach* combining "
+            "technical skills, soft skills, and personal development. 💻\n\n"
+            "While studying at PNC, students’ basic needs such as housing, food, and medical care "
+            "are fully supported. 🎓",
+            parse_mode="Markdown"
         )
         return
 
-    if "passerelles numériques" in user_text or "What is passerelles numériques" in user_text or "passerelles numeriques" in user_text or "what is passerelles numeriques?" in user_text:
+    elif any(keyword in user_text for keyword in [
+        "passerelles numériques",
+        "passerelles numeriques",
+        "what is passerelles numériques",
+        "what is passerelles numeriques"
+    ]):
         await update.message.reply_text(
-            "Passerelles Numériques is French non-profit organization, created in 2005, witch intends to enable the most under priviliged young people access to higher education and skilled employment in the promising sector of Inormation Technology (IT)."
+            "🇫🇷 *Passerelles Numériques (PN)* is a French non-profit organization* founded in 2005.* "
+            "Its mission is to enable underprivileged young people to access *education* and "
+            "*skilled employment* in the fast-growing IT sector. 🌍\n\n"
+            "PN operates in Cambodia, the Philippines, and Vietnam.",
+            parse_mode="Markdown"
         )
         return
-    
-    if "What is training program at pnc?" in user_text or "training program at pnc" in user_text or "tell me about training program at pnc" in user_text or "information about training program at pnc" in user_text or "training program pnc" in user_text:
+
+    elif any(keyword in user_text for keyword in [
+        "training program at pnc",
+        "pnc training program",
+        "information about training program at pnc",
+        "tell me about training program at pnc",
+        "what is training program at pnc"
+    ]):
         await update.message.reply_text(
-            "Paserelles numeriques has implelemented an innovative and comprehensive training program in each of its centers, focused on long-term employability. An associate degree in Computer Sience, passerelles numeriques in Cambodia (PNC) offers a 2-year full time training in IT with a major in software Development, meeting the needs of local companies in the IT industry, for underprivileged Cambodian youths. PNC is registered with the Cambodian Ministry of Education, Youth and Sports. At the end of the training, students receive an Assocciate Computer Sience with a major in software Development, as well as a Passerelles Numériques certificate. Throughout their traning, students benefit from a comprehensive professional and technical skills training, and strong support for their professional integration. They also participate in extra-curricular and personal development activities."
+            "🎓 *PNC Training Program*\n\n"
+            "PNC provides a 2-year full-time *Associate Degree in Computer Science*, "
+            "majoring in *Software Development*. 💻\n\n"
+            "The curriculum focuses on:\n"
+            "• Technical and professional skills\n"
+            "• English and soft skills\n"
+            "• Personal development and employability\n\n"
+            "PNC is officially recognized by the *Ministry of Education, Youth and Sports* of Cambodia. "
+            "Students graduate with both a national diploma and a *Passerelles Numériques certificate.* 🏅",
+            parse_mode="Markdown"
         )
         return
-    
-        # --- 🏫 PNC Values ---
-    if "pnc values" in user_text or "values of pnc" in user_text:
+
+    elif any(keyword in user_text for keyword in [
+        "core values of pnc",
+        "pnc core values",
+        "values of passerelles numériques cambodia",
+        "values of pnc",
+        "pnc values",
+        "what are the core values of pnc"
+    ]):
         await update.message.reply_text(
-            "Passerelles Numériques Cambodia (PNC) — like all Passerelles Numériques centers — is guided by five strong core values that shape the behavior, mindset, and teamwork of every student and staff member.Here are the PNC core values:"
-            "1.Respec: We treat everyone with kindness, fairness, and dignity. Respect is the foundation of teamwork and good communication."
+            "🌟 *PNC Core Values*\n\n"
+            "1️⃣ *Respect* — Treat everyone with fairness, dignity, and kindness.\n"
+            "2️⃣ *Responsibility* — Take ownership and always do your best.\n"
+            "3️⃣ *Solidarity* — Support and help each other to grow together.\n"
+            "4️⃣ *Trust* — Be honest, reliable, and transparent.\n"
+            "5️⃣ *Demanding Approach* — Always strive for quality and excellence. 💪\n\n"
+            "These values guide how every student and staff member at PNC behaves, learns, "
+            "and collaborates each day. 🤝",
+            parse_mode="Markdown"
         )
         return
+
     
     # Help information
     if "help" in user_text:
