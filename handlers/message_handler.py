@@ -1,23 +1,19 @@
+# handlers/message_handler.py
 from telegram import Update
-from telegram.ext import ContextTypes
-from utils.ai_service import ai_service
+from telegram.ext import ContextTypes, MessageHandler, filters
 
-async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    user_message = update.message.text
-    
-    # Don't process commands
-    if user_message.startswith('/'):
-        return
-    
-    # Show typing action
-    await update.message.chat.send_action(action="typing")
-    
-    try:
-        # Get AI response for any question
-        ai_response = await ai_service.get_ai_response(user_message)
-        
-        # Send response back to user
-        await update.message.reply_text(ai_response)
-        
-    except Exception as e:
-        await update.message.reply_text(f"Sorry, I'm having trouble right now. Please try again later. Error: {str(e)}")
+async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user_text = update.message.text.strip().lower()
+
+    if "hello" in user_text or "hi" in user_text:
+        await update.message.reply_text("Hello there! 👋 I'm SmartBot.")
+    elif "how are you" in user_text:
+        await update.message.reply_text("I'm doing great 😄 How about you?")
+    elif "your name" in user_text:
+        await update.message.reply_text("I'm SmartBot 🤖, nice to meet you!")
+    elif "help" in user_text:
+        await update.message.reply_text("You can say 'hello', 'how are you', or ask my name.")
+    else:
+        await update.message.reply_text("Hmm 🤔 I don’t understand. Try typing /help.")
+
+logic_handler = MessageHandler(filters.TEXT & ~filters.COMMAND, logic_reply)
