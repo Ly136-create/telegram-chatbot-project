@@ -52,6 +52,12 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return
     
+    if "What is training program at pnc?" in user_text or "training program at pnc" in user_text or "tell me about training program at pnc" in user_text or "information about training program at pnc" in user_text or "training program pnc" in user_text:
+        await update.message.reply_text(
+            "Paserelles numeriques has implelemented an innovative and comprehensive training program in each of its centers, focused on long-term employability. An associate degree in Computer Sience, passerelles numeriques in Cambodia (PNC) offers a 2-year full time training in IT with a major in software Development, meeting the needs of local companies in the IT industry, for underprivileged Cambodian youths. PNC is registered with the Cambodian Ministry of Education, Youth and Sports. At the end of the training, students receive an Assocciate Computer Sience with a major in software Development, as well as a Passerelles Numériques certificate. Throughout their traning, students benefit from a comprehensive professional and technical skills training, and strong support for their professional integration. They also participate in extra-curricular and personal development activities."
+        )
+        return
+    
     # Help information
     if "help" in user_text:
         await update.message.reply_text(
