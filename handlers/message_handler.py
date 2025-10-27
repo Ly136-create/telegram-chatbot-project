@@ -15,13 +15,12 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         ]
         await update.message.reply_text(random.choice(responses))
         return
-    greetings_qa = ["how are you", "how's it going", "how do you do", "How was your day"]
+    greetings_qa = ["how are you?","how's it going?""how do you do?","how was your day?", "how have you been?", "how are things?", "how's everything?", "how are you", "how's it going", "how do you do", "how was your day", "how have you been", "how are things", "how's everinthing"]
     if any(qa in user_text for qa in greetings_qa):
         responses = [
             "It's going well, thank you! How about you? 😊",
             "I'm doing great 😄 How about you?",
-            "All systems online 🚀 Feeling awesome!",
-            "Fantastic! Thanks for asking 💪"
+            "Fantastic! Thanks for asking 💪, How about you?"
         ]
         await update.message.reply_text(random.choice(responses))
         return
@@ -55,6 +54,14 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if "What is training program at pnc?" in user_text or "training program at pnc" in user_text or "tell me about training program at pnc" in user_text or "information about training program at pnc" in user_text or "training program pnc" in user_text:
         await update.message.reply_text(
             "Paserelles numeriques has implelemented an innovative and comprehensive training program in each of its centers, focused on long-term employability. An associate degree in Computer Sience, passerelles numeriques in Cambodia (PNC) offers a 2-year full time training in IT with a major in software Development, meeting the needs of local companies in the IT industry, for underprivileged Cambodian youths. PNC is registered with the Cambodian Ministry of Education, Youth and Sports. At the end of the training, students receive an Assocciate Computer Sience with a major in software Development, as well as a Passerelles Numériques certificate. Throughout their traning, students benefit from a comprehensive professional and technical skills training, and strong support for their professional integration. They also participate in extra-curricular and personal development activities."
+        )
+        return
+    
+        # --- 🏫 PNC Values ---
+    if "pnc values" in user_text or "values of pnc" in user_text:
+        await update.message.reply_text(
+            "Passerelles Numériques Cambodia (PNC) — like all Passerelles Numériques centers — is guided by five strong core values that shape the behavior, mindset, and teamwork of every student and staff member.Here are the PNC core values:"
+            "1.Respec: We treat everyone with kindness, fairness, and dignity. Respect is the foundation of teamwork and good communication."
         )
         return
     
