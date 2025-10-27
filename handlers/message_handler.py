@@ -15,8 +15,8 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         ]
         await update.message.reply_text(random.choice(responses))
         return
-
-    if "how are you" in user_text or "how's it going" in user_text or "how do you do" in user_text or"How was your day" in user_text:
+    greetings_qa = ["how are you", "how's it going", "how do you do", "How was your day"]
+    if any(qa in user_text for qa in greetings_qa):
         responses = [
             "It's going well, thank you! How about you? 😊",
             "I'm doing great 😄 How about you?",
@@ -26,7 +26,8 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(random.choice(responses))
         return
 
-    if "your name" in user_text or "who are you" in user_text or "what's your name" in user_text or "tell me about yourself" in user_text or "tell your name" in user_text:
+    introduction_qa = ["what is your name", "who are you", "tell me about yourself", "introduce yourself"]
+    if any(intro in user_text for intro in introduction_qa):
         responses = [
             "I'm SmartBot 🤖, your friendly assistant!",
             "People call me SmartBot — nice to meet you!",
@@ -45,7 +46,7 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return
 
-    if "passerelles numériques" in user_text or "What is passerelles numériques" in user_text or "paserelles numeriques" in user_text or "what is passereles numeriques?" in user_text:
+    if "passerelles numériques" in user_text or "What is passerelles numériques" in user_text or "passerelles numeriques" in user_text or "what is passerelles numeriques?" in user_text:
         await update.message.reply_text(
             "Passerelles Numériques is French non-profit organization, created in 2005, witch intends to enable the most under priviliged young people access to higher education and skilled employment in the promising sector of Inormation Technology (IT)."
         )
