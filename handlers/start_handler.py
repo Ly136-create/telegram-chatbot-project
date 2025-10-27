@@ -1,16 +1,8 @@
+# handlers/start_handler.py
 from telegram import Update
-from telegram.ext import ContextTypes
+from telegram.ext import ContextTypes, CommandHandler
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    welcome_text = """
-🤖 Welcome to SmartBot!
+    await update.message.reply_text("Hi! 🤖 I’m SmartBot. Type something to chat with me.")
 
-I'm an AI-powered chatbot that can help you with:
-• Answering any questions
-• Providing information
-• Having conversations
-• And much more!
-
-Just send me a message and I'll respond!
-    """
-    await update.message.reply_text(welcome_text)
+start_handler = CommandHandler("start", start)
