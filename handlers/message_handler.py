@@ -1,10 +1,16 @@
-# handlers/message_handler.py
+import re
 import random
 from telegram import Update
 from telegram.ext import ContextTypes, MessageHandler, filters
 
+# Function to handle message logic
 async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    user_text = update.message.text.lower().strip()
+    # Get user text safely
+    user_text = update.message.text or ""
+ 
+    # Normalize text: lowercase + remove punctuation
+    clean_text = re.sub(r'[^\w\s]', '', user_text.lower()).strip()
+
 
     greetings = ["hi", "hello", "hey", "good morning", "good afternoon", "good evening", "morning", "afternoon", "evening"]
     if any(greet in user_text for greet in greetings):
@@ -124,6 +130,23 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return
     
+    # 🏫 PNC Location / Address
+    elif any(keyword in clean_text for keyword in [
+    "where is pnc",
+    "pnc location",
+    "location of pnc",
+    "pnc address",
+    "address pnc"
+    ]):
+        await update.message.reply_text(
+        "📍 Passerelles Numériques Cambodia (PNC) is located at:\n"
+        "BP 511, St. 371, Phum Tropeang Chhuk (Borey Sorla),\n"
+        "Sangkat Tek Thla, Khan Sen Sok, Phnom Penh, Cambodia. 🇰🇭"
+        )
+        return
+
+
+
     # Help information
     if "help" in user_text:
         await update.message.reply_text(
