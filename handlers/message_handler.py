@@ -188,6 +188,212 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return
 
+
+    # List students in Generation 2025
+    elif any(keyword in clean_text for keyword in [
+        "list down name students of generation 2025",
+        "list students generation 2025",
+        "students in generation 2025"
+    ]):
+        await update.message.reply_text(
+        """📋 **List of Students - Generation 2025**
+    ID last Name First Name Sex
+    PNC2025_001	AN	LIYA		    F
+    PNC2025_002	BOY	SOKCHEA		    M   
+    PNC2025_003	BRAK PICH	        F
+    PNC2025_004	CHAB CHARYNA		    F
+    PNC2025_005	CHAMPHAI NANGKHOEUM	    F
+    PNC2025_006	CHANHAK	THAVRY		    F
+    PNC2025_007	CHHEANG	PHALLY		    F
+    PNC2025_008	CHHEUN SEANG MENG	    M   
+    PNC2025_009	CHHIN  SOR	        F
+    PNC2025_010	CHHOEUN	YA	        F
+    PNC2025_011	CHHOEURN SREYNICH	F
+    PNC2025_012	CHHOUY CHHEA		M   
+    PNC2025_013	CHHUM RACHANA	    F
+    PNC2025_014	CHHUONG	KIMCHHIK	F
+    PNC2025_015	CHOR BUNNY	        M   
+    PNC2025_016	DIN	LEADER	        M   
+    PNC2025_017	DIN	YONGSY	        F
+    PNC2025_018	DORK RETTHY	        M   
+    PNC2025_019	DOUNG KIN	        M   
+    PNC2025_020	EM	SOPHY	        M   
+    PNC2025_021	ERN	SINH	        M   
+    PNC2025_022	HEAN BUNYOUNG       M   
+    PNC2025_023	HENG HORTH	        M   
+    PNC2025_024	HON	SREYKA	        F
+    PNC2025_025	HOY	DARIN	        M   
+    PNC2025_026	KAN	CHANNAK	        F
+    PNC2025_027	KHAT  BOPHA		    F
+    PNC2025_028	KHAT  LYNAK		    F
+    PNC2025_029	KHEANG  SONAVY	    F
+    PNC2025_030	LENG VANDA	        M   
+    PNC2025_031	LOEM SENGHIN	    F
+    PNC2025_032	LOEUN SREYNEANG	    F
+    PNC2025_033	MAO  KANHA	        F
+    PNC2025_034	MENG  MEALEA        F
+    PNC2025_035	MON	PANY            M   
+    PNC2025_036	MORN  SODA	        M   
+    PNC2025_037	NAK	SOKLEN	        F
+    PNC2025_038	NATH  MESA	        F
+    PNC2025_039	NEAK SINA	        M   
+    PNC2025_040	NEAT  CHANDY        M   
+    PNC2025_041	NEAT  SOLIN	        F
+    PNC2025_042	NHEAN  PANHA        M   
+    PNC2025_043	OEM	PHEAKTRA        M   
+    PNC2025_044	PHENG NEANG	AH NOCH	    F
+    PNC2025_045	PHON SREYVANG	    F
+    PNC2025_046	PHORNG  LYMENG	    M   
+    PNC2025_047	PHOUK SOPHEAN	    M   
+    PNC2025_048	POUY KOSAL	        M   
+    PNC2025_049	RIN	LINNA	        F
+    PNC2025_050	RIN	PHANHAPICH	    F
+    PNC2025_051	ROCHOM	OEUB	    M   
+    PNC2025_052	ROM	SREYNEATH	    F
+    PNC2025_053	ROM	SREYPICH	    F
+    PNC2025_054	RUN	SAMNOEUN	    F
+    PNC2025_055	SAO	SREY LET	    F
+    PNC2025_056	SENG SOKLEAP	    F
+    PNC2025_057	SEOURN LE THEAN	    M   
+    PNC2025_058	SIM	SOKHA	        F
+    PNC2025_059	SOK	SAMBAT	        M   
+    PNC2025_060	SORK  MENG SEU	    M   
+    PNC2025_061	SOUERN SOVAN	    M   
+    PNC2025_062	SUON  SAMOUN	    M   
+    PNC2025_063	TEP	NILRATHANA	    F
+    PNC2025_064	THA	KOEMTHAY	    M   
+    PNC2025_065	THENG  POLEAK	    M   
+    PNC2025_066	THIN CHHORRINA	    F
+    PNC2025_067	THOL SOK AN         M   
+    PNC2025_068	THY	KARTRORK        M   
+    PNC2025_069	TORM SELA	        F
+    PNC2025_070	UN MEAN	            M   
+    PNC2025_071	UN PISETH	        M   
+    PNC2025_072	VEN	THAT	        M   
+    PNC2025_073	YEM	SEAVMEY	        F
+    PNC2025_074	YON	RATANA	        M   
+
+
+        """
+        )
+        return
+
+    # students Generation 2025
+    elif any(keyword in clean_text for keyword in [
+        "how many students in generation 2025"
+        "students generation 2025",
+        "generation 2025 students",
+        "generation 2025"
+    ]):
+        await update.message.reply_text(
+            "Good Question"
+            "In Generation 2025, there are **74 students** at Passerelles Numériques Cambodia. 🎓"
+        )
+        return
+    
+        # List students in Generation 2026
+    elif any(keyword in clean_text for keyword in [
+        "list down name students of generation 2026",
+        "list students generation 2026",
+        "students in generation 2026"
+    ]):
+        await update.message.reply_text(
+        """📋 **List of Students - Generation 2026**
+    ID    Last Name  First Name
+    PNC2026_001	BUNTIT	SATAN       F
+    PNC2026_002	CHET 	CHANTHY     F
+    PNC2026_003	CHHEA	CHANTHEA    F
+    PNC2026_004	CHROUN	NITA        F
+    PNC2026_005	HAN	CHANTREA        F
+    PNC2026_006	HAV	VICHEKA         F
+    PNC2026_007	HEN	NARITH          M
+    PNC2026_008	HENG	LIHEANG     M
+    PNC2026_009	HOEURN	CHANSAYHA   M
+    PNC2026_010	HO	RINA            F
+    PNC2026_011	HUT	SREYPOV         F
+    PNC2026_012	KE	SOTHIN          M
+    PNC2026_013	KEO	SREYDOEURN      F
+    PNC2026_014	KEUN	SREYKEO     F
+    PNC2026_015	KHON	SREYDETH    F
+    PNC2026_016	KHORN	REAM        M
+    PNC2026_017	KHOUEN	JAME        M
+    PNC2026_018	KIM	DARIKA          F
+    PNC2026_019	KOEUN	PANHA       M
+    PNC2026_020	KREAN	VA KHIM     M
+    PNC2026_021	LAKK	SOKYANG     F
+    PNC2026_022	LEK 	SINAT       F
+    PNC2026_023	LEN	VANNA           M
+    PNC2026_024	LENG SOKKHOEURN     F
+    PNC2026_025	LIN	SREY MAO        F
+    PNC2026_026	LON	MOLIKA          F
+    PNC2026_027	LUCH 	SAMART      F
+    PNC2026_028	MIOK	DANE        M
+    PNC2026_029	MOEURN	SOPHY       M
+    PNC2026_030	NANG CHHITCHHANUT   F
+    PNC2026_031	NEA	PISET           M
+    PNC2026_032	NIM	SOKNY           M
+    PNC2026_033	NY	SEYHA           M
+    PNC2026_034	PENH 	BOREY       F
+    PNC2026_035	PHAL	SOPHEA      F
+    PNC2026_036	PHAN	PHOUN       M
+    PNC2026_037	PHEM	SEREY       M
+    PNC2026_038	PHOEURN	KOEMSEANG   F
+    PNC2026_039	PHORN	YA          M
+    PNC2026_040	PHUONG	SAVIN       M
+    PNC2026_041	PINN	MAKARA      F
+    PNC2026_042	PO	SREYMOM         F
+    PNC2026_043	PON	MAKARA          F
+    PNC2026_044	REN	RANIT           F
+    PNC2026_045	RIN	MESA            M
+    PNC2026_046	ROS	ROEURN          M
+    PNC2026_047	SAK	VISA            F
+    PNC2026_048	SAN	REAKSMEY        M
+    PNC2026_049	SANG	SREYROTH    F
+    PNC2026_050	SANN	SIV         M
+    PNC2026_051	SAO	MARY            F
+    PNC2026_052	SARL 	LY          M
+    PNC2026_053	SAT	VICHET          M
+    PNC2026_054	SEM	SREY LEAK       F
+    PNC2026_055	SEN	SOKSEYLA        F
+    PNC2026_056	SIENG 	SOPHAT      M
+    PNC2026_057	SIM	SAMNANG         M
+    PNC2026_058	SOENG	VICHEKA     F
+    PNC2026_059	SOK	LITA            F
+    PNC2026_060	SOK	THALITA         F
+    PNC2026_061	SOKHA	RATHANA     M
+    PNC2026_062	SONG	CHAMROEUN   M
+    PNC2026_063	SOPHORN  SOPHEA     F
+    PNC2026_064	SRIN	CHANDY      F
+    PNC2026_065	SUONG 	PHALLA      M
+    PNC2026_066	SVIT	SAN         M
+    PNC2026_067	TALAB	REACH       M
+    PNC2026_068	THA	DARINHIL        M
+    PNC2026_069	TIM	TOLA            M
+    PNC2026_070	VAN	SIEVMEY         F
+    PNC2026_071	VEN	CHANNY          F
+    PNC2026_072	VOEUN	KING        M
+    PNC2026_073	VON	SREYVIK         F
+    PNC2026_074	YEANG	SOK KEANG   F
+    PNC2026_075	YOM	PILIP           M
+    PNC2026_076	YON	KUNTHEA         F
+    PNC2026_077	YORM	KRAVANN     M
+
+        """
+        )
+        return
+    # students Generation 2026
+    elif any(keyword in clean_text for keyword in [
+        "how many students in generation 2026"
+        "students generation 2026",
+        "generation 2026 students",
+        "generation 2026"
+    ]):
+        await update.message.reply_text(
+            "Good Question"
+            "In Generation 2025, there are **74 students** at Passerelles Numériques Cambodia. 🎓"
+        )
+        return
+
     # Help informations
     if "help" in user_text:
         await update.message.reply_text(
