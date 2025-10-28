@@ -145,6 +145,29 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return
 
+    # 📞 Contact PNC
+    elif any(keyword in clean_text for keyword in [
+        "how can i contact pnc",
+        "contact pnc",
+        "pnc contact",
+        "contact passerelles numeriques cambodia",
+        "contact passerelles numeriques",
+        "how to contact pnc",
+        "pnc phone",
+        "pnc email",
+        "how to reach pnc",
+        "reach pnc"
+    ]):
+        await update.message.reply_text(
+            "📞 **Here’s how you can contact Passerelles Numériques Cambodia (PNC):**\n\n"
+            "🏫 **Address:** BP 511, St. 371, Phum Tropeang Chhuk (Borey Sorla),\n"
+            "Sangkat Tek Thla, Khan Sen Sok, Phnom Penh, Cambodia 🇰🇭\n\n"
+            "📱 **Phone:** +855 23 99 55 00\n\n"
+            "✉️ **Email:** info.cambodia@passerellesnumeriques.org\n"
+            "👩‍💼 **External Relations Manager:** sreynich.leng@passerellesnumeriques.org"
+        )
+        return
+
 
 
     # Help information
