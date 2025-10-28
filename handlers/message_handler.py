@@ -12,8 +12,11 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
     clean_text = re.sub(r'[^\w\s]', '', user_text.lower()).strip()
 
 
-    greetings = ["hi", "hello", "hey", "good morning", "good afternoon", "good evening", "morning", "afternoon", "evening"]
-    if any(greet in user_text for greet in greetings):
+    # Greeting handler
+    if any(keyword in clean_text for keyword in [
+        "hi", "hi friend", "hello", "hello friend", "hey", "hey friend",
+        "good morning", "good afternoon", "good evening", "morning", "afternoon", "evening"
+    ]):
         responses = [
             "Hello there! 👋 I'm SmartBot.",
             "Hey! 😊 How can I help you today?",
@@ -21,18 +24,24 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         ]
         await update.message.reply_text(random.choice(responses))
         return
-    greetings_qa = ["how are you?","how's it going?""how do you do?","how was your day?", "how have you been?", "how are things?", "how's everything?", "how are you", "how's it going", "how do you do", "how was your day", "how have you been", "how are things", "how's everinthing"]
-    if any(qa in user_text for qa in greetings_qa):
+    
+    
+    elif any(keyword in clean_text for keyword in [
+    "how are you", "how are you friend", "how's it going", "how do you do",
+    "how was your day", "how have you been", "how are things", "how's everything"
+    ]):
         responses = [
-            "It's going well, thank you! How about you? 😊",
-            "I'm doing great 😄 How about you?",
-            "Fantastic! Thanks for asking 💪, How about you?"
-        ]
+        "It's going well, thank you! How about you? 😊",
+        "I'm doing great 😄 How about you?",
+        "Fantastic! Thanks for asking 💪 How about you?"
+    ]
         await update.message.reply_text(random.choice(responses))
         return
 
-    introduction_qa = ["what is your name", "who are you", "tell me about yourself", "introduce yourself"]
-    if any(intro in user_text for intro in introduction_qa):
+    
+    elif any(keyword in clean_text for keyword in [
+        "what is your name", "who are you", "tell me about yourself", "introduce yourself"
+    ]):
         responses = [
             "I'm SmartBot 🤖, your friendly assistant!",
             "People call me SmartBot — nice to meet you!",
@@ -159,7 +168,7 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "reach pnc"
     ]):
         await update.message.reply_text(
-            "📞 **Here’s how you can contact Passerelles Numériques Cambodia (PNC):**\n\n"
+            "📞 **Here's how you can contact Passerelles Numériques Cambodia (PNC):**\n\n"
             "🏫 **Address:** BP 511, St. 371, Phum Tropeang Chhuk (Borey Sorla),\n"
             "Sangkat Tek Thla, Khan Sen Sok, Phnom Penh, Cambodia 🇰🇭\n\n"
             "📱 **Phone:** +855 23 99 55 00\n\n"
@@ -167,10 +176,19 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "👩‍💼 **External Relations Manager:** sreynich.leng@passerellesnumeriques.org"
         )
         return
+        
+    # Respond to PNC full name questions
+    elif any(keyword in clean_text for keyword in [
+        "what does pnc stand for",
+        "pnc full name"
+    ]):
+        await update.message.reply_text(
+            "**Great question!**\n\n"
+            "PNC stands for **Passerelles Numériques Cambodia**."
+        )
+        return
 
-
-
-    # Help information
+    # Help informations
     if "help" in user_text:
         await update.message.reply_text(
             "Here's what I can do:\n"
