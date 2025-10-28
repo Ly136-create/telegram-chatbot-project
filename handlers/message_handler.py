@@ -455,6 +455,18 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "and Hou Lavy"
         )
         return
+    # PL Trainer
+    elif any(keyword in clean_text for keyword in [
+        "how many pl trainer",
+        "how many professional life trainer",
+        "who is pl trainer",
+        "who is professional life trainer",
+    ]):
+        await update.message.reply_text(
+            "Great!\n"
+            "There is only Puthy Kry of Professional Life trainer."
+        ) 
+
     # Help informations
     if "help" in user_text:
         await update.message.reply_text(
