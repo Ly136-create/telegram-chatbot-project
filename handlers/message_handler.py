@@ -390,10 +390,71 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]):
         await update.message.reply_text(
             "Good Question"
-            "In Generation 2025, there are **74 students** at Passerelles Numériques Cambodia. 🎓"
+            "In Generation 2025, there are **77 students** at Passerelles Numériques Cambodia. 🎓"
         )
         return
 
+    # IT Admin at PNC
+    elif any(keyword in clean_text for keyword in [
+        "how many it admin",
+        "it admin at pnc",
+        "it admin"
+    ]):
+        await update.message.reply_text(
+            "Great!, \n"
+            "There are 2 IT Admin.  " 
+            "Such as " 
+            "Savoeurn Chorch" 
+            "and Chim Sopheak."
+        )
+        return
+    
+    # IT trainer at PNC
+    elif any(keyword in clean_text for keyword in [
+        "how many it trainers",
+        "how many it trainer",
+        "it trianers at pnc",
+        "it trainer at pnc",
+        "it trainer"
+    ]):
+        await update.message.reply_text(
+            "Good Question!, \n"
+            "Here are your IT trainer.\n" 
+            "There are 4 trainer such as:\n" 
+            "1. Rady Y \n" 
+            "2. Him HEY \n"
+            "3. Yon Yen \n"
+            "4. Pho Mengheang \n"
+        )
+        return
+    
+    # Who handsome 
+    elif any(keyword in clean_text for keyword in [
+        "who is the handsome trainner",
+        "who is handsome"
+    ]):
+        await update.message.reply_text(
+        "Amazing!, \n"
+        "Here is your handsome trainer.\n" 
+        "He's name is T.Yon Yen. 😄" 
+        )
+        return
+    
+    # English trainer at PNC
+    elif any(keyword in clean_text for keyword in [
+        "how many english trainer",
+        "english trainer at pnc",
+        "english trainer"
+    ]):
+        await update.message.reply_text(
+            "Great!, \n"
+            "There are 3 trainer.  " 
+            "Such as " 
+            "HEAN Sokhom, "
+            "Kengsovanchan SreyLeap, " 
+            "and Hou Lavy"
+        )
+        return
     # Help informations
     if "help" in user_text:
         await update.message.reply_text(
