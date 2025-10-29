@@ -588,6 +588,25 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return
     
+    # PN student’s paths
+    elif any(keyword in clean_text for keyword in [
+        "pn students paths",
+        "what is pn students paths",
+        "tell me about pn students paths",
+        "tell pn students paths",
+        "tell about pn students paths",
+        " give pn students paths",
+        "give me pn students paths",
+        "give me about pn students paths",
+        "give about pn students paths"
+    ]):
+        await update.message.reply_text(
+            "Great!\n\n"
+            "We provide technical training, professional and personal development training in our centers in Southeast Asia, and a preparatory program to university in our center in Madagascar. In our centers, we cover the basic needs of our students, including their wellbeing."
+            "From their first day of school, until graduation and their first job, we support each of our students on their journey."
+        )
+        return
+    
     # Help informations
     if "help" in user_text:
         await update.message.reply_text(
