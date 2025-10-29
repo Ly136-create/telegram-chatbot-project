@@ -431,7 +431,9 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Who handsome 
     elif any(keyword in clean_text for keyword in [
         "who is the handsome trainner",
-        "who is handsome"
+        "who is handsome",
+        "who is the most handsome",
+        "tell me who the most handsome"
     ]):
         await update.message.reply_text(
         "Amazing!, \n"
@@ -448,7 +450,7 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]):
         await update.message.reply_text(
             "Great!, \n"
-            "There are 3 trainer.  " 
+            "There are 3 trainers.  " 
             "Such as " 
             "HEAN Sokhom, "
             "Kengsovanchan SreyLeap, " 
@@ -465,7 +467,61 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(
             "Great!\n"
             "There is only Puthy Kry of Professional Life trainer."
-        ) 
+        )
+
+    # All trainer at PNC
+    elif any(keyword  in clean_text for keyword in [
+
+    ]):
+        await update.message.reply_text(
+            "Great!\n"
+            "There are 15 trainers.\n"
+            "1. It trainers are 6.\n"
+            "2. English trainers are 3.\n"
+            "3. Professional Life trainer 1.\n"
+            "4. Education trainers are 5.\n"
+            "Thank you, for your question.😁"
+        )
+
+    # All generation 
+    elif any(keyword  in clean_text for keyword in [
+        "how many generations does pnc have",
+        "give me all generations of pnc",
+        "give me all generations that pnc have",
+        "give me all generations at pnc",
+        "tell me all generations of pnc",
+        "tell me all generations of pnc",
+        "how many generations in pnc",
+        "tell me about all generations of pnc",
+        "count all generations in pnc",
+        "count all generations",
+    ]):
+        await update.message.reply_text(
+            "Great!\n"
+            "Currently there are 20 generations.\n"
+            "1. Generations 2007\n"
+            "2. Generations 2008\n"
+            "3. Generations 2009\n"
+            "4. Generations 2010\n"
+            "5. Generations 2011\n"
+            "6. Generations 2012\n"
+            "7. Generations 2013\n"
+            "8. Generations 2014\n"
+            "9. Generations 2015\n"
+            "10. Generations 2016\n"
+            "11. Generations 2017\n"
+            "12. Generations 2018\n"
+            "13. Generations 2019\n"
+            "14. Generations 2020\n"
+            "15. Generations 2021\n"
+            "16. Generations 2022\n"
+            "17. Generations 2023\n"
+            "18. Generations 2024\n"
+            "19. Generations 2025\n"
+            "20. Generations 2026\n"
+            "Do you have any question?😁"
+        )
+        return
 
     # Help informations
     if "help" in user_text:
