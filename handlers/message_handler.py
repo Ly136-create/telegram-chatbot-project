@@ -1056,7 +1056,19 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "🤝 Friendship means a close and trusting relationship between people who care for and support each other. 💙"
         )
         return
-
+    elif any(keyword in clean_text for keyword in [
+        "who is your boyfriend",
+        "who is your girlfriend",
+        "do you have a boyfriend",
+        "do you have a girlfriend",
+        "tell me your boyfriend",
+        "tell me your girlfriend"
+    ]):
+        await update.message.reply_text(
+            "😂 Haha! I don’t have a boyfriend or girlfriend — I’m just a friendly bot! No feelings, no crushes, only kindness. ❤️"
+        )
+        return
+    
     elif any(keyword in clean_text for keyword in [
         "why are friends important",
         "importance of friends",
