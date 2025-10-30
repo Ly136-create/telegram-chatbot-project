@@ -103,7 +103,7 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # --- 🏫 PNC Information
     # 1️ Training Program (check this FIRST)
-    if any(keyword in clean_text for keyword in [
+    elif any(keyword in clean_text for keyword in [
         "training program at pnc",
         "pnc training program",
         "tell me about training program at pnc",
@@ -897,10 +897,13 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "are you single",
         "are you in love"
     ]):
-        await update.message.reply_text(
-            "😂 Haha! I’m just a friendly bot — no feelings, no crushes! But I can help you find confidence and kindness instead. ❤️"
-        )
-        return
+       responses = [
+        "😂 Haha! I'm just a friendly bot — no feelings, no crushes!",
+        "😅 Sorry, no dating for bots — but I can give you great advice instead!",
+        "❤️ Love's not my thing, but I'm always here for good vibes!"
+        ]   
+       await update.message.reply_text(random.choice(responses))
+       return
 
     elif any(keyword in clean_text for keyword in [
         "who is the prettiest student at pnc",
@@ -970,7 +973,7 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "tell me about your family members"
     ]):
         await update.message.reply_text(
-            "🤖 I don’t have a real family like humans, but if I did, you’d definitely be part of it! 💙"
+            "🤖 I don't have a real family like humans, but if I did, you'd definitely be part of it! 💙"
         )
         return
 
@@ -1100,7 +1103,7 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "when friends fight"
     ]):
         await update.message.reply_text(
-            "🕊️ Stay calm, talk about your feelings, and listen to your friend’s side. Apologize if you’re wrong — forgiveness is stronger than pride."
+            "🕊️ Stay calm, talk about your feelings, and listen to your friend's side. Apologize if you're wrong — forgiveness is stronger than pride."
         )
         return
 
@@ -1130,7 +1133,7 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "can we be friends"
     ]):
         await update.message.reply_text(
-            "😄 Absolutely! I’m your friendly SmartBot — always here to chat, help, and support you like a real friend. 🤗"
+            "😄 Absolutely! I'm your friendly SmartBot — always here to chat, help, and support you like a real friend. 🤗"
         )
         return
 
@@ -1144,15 +1147,365 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return
     
-    # Help informations
+    # --- 📚 Training & Education Questions ---
+    elif any(keyword in clean_text for keyword in [
+        "what do students learn at pnc",
+        "what students learn",
+        "what kind of training does pnc give",
+        "kind of training",
+        "how long is the course at pnc",
+        "course length",
+        "what subjects do you study at pnc",
+        "subjects",
+        "what degree do students get after studying at pnc",
+        "degree",
+        "is the training free at pnc",
+        "training free",
+        "who can apply to study at pnc",
+        "who can apply",
+        "how can i join pnc",
+        "how to join",
+        "what are the requirements to become a pnc student",
+        "requirements",
+        "do students get to do internships",
+        "internships"
+    ]):
+        if "learn" in clean_text:
+            await update.message.reply_text(
+                "Students learn practical and theoretical skills in technology, business, and other professional fields, with hands-on training to prepare for jobs."
+            )
+        elif "kind of training" in clean_text or "training" in clean_text:
+            await update.message.reply_text(
+                "PNC offers career-focused training such as IT, digital marketing, business management, technical and vocational skills, and soft skills."
+            )
+        elif "course" in clean_text or "how long" in clean_text:
+            await update.message.reply_text(
+                "Courses vary from 6 months to 2 years depending on the program type."
+            )
+        elif "subjects" in clean_text:
+            await update.message.reply_text(
+                "Subjects include programming, networking, business administration, accounting, English, project management, and entrepreneurship."
+            )
+        elif "degree" in clean_text:
+            await update.message.reply_text(
+                "Students usually receive a diploma or certificate; some programs may offer professional certifications."
+            )
+        elif "free" in clean_text:
+            await update.message.reply_text(
+                "Some programs are fully or partially sponsored, and scholarships are available for eligible students."
+            )
+        elif "who can apply" in clean_text:
+            await update.message.reply_text(
+                "High school graduates or equivalent, or individuals seeking skill development who meet program requirements."
+            )
+        elif "join" in clean_text:
+            await update.message.reply_text(
+                "Visit the PNC website or campus, fill out the application form, submit documents, and attend interviews or assessments if required."
+            )
+        elif "requirements" in clean_text:
+            await update.message.reply_text(
+                "Requirements include minimum education level, age requirement, basic language proficiency, and sometimes a motivation letter or interview."
+            )
+        elif "internships" in clean_text:
+            await update.message.reply_text(
+                "Yes! Most programs include internships with partner companies, practical projects, and networking opportunities."
+            )
+        return
+
+    # --- 🎓 Student Life & Support Questions ---
+    elif any(keyword in clean_text for keyword in [
+        "does pnc provide dorms",
+        "does pnc provide food",
+        "dorms or food",
+        "do students get support",
+        "student support",
+        "does pnc help students find jobs",
+        "job support",
+        "pncs core values",
+        "core values",
+        "student life at pnc",
+        "what is student life like",
+        "do students study english",
+        "english classes",
+        "is pnc only for students from phnom penh",
+        "only for phnom penh students"
+    ]):
+        if "dorm" in clean_text or "food" in clean_text:
+            await update.message.reply_text(
+                "Yes! PNC provides dormitories and food support for students, ensuring a comfortable study environment."
+            )
+        elif "support" in clean_text:
+            await update.message.reply_text(
+                "PNC offers various support services, including academic guidance, mentorship, and student counseling while studying."
+            )
+        elif "jobs" in clean_text:
+            await update.message.reply_text(
+                "Yes! PNC helps students find jobs after graduation through internships, career fairs, and partnerships with companies."
+            )
+        elif "core values" in clean_text:
+            await update.message.reply_text(
+                "PNC's core values focus on integrity, excellence, innovation, teamwork, and lifelong learning."
+            )
+        elif "student life" in clean_text:
+            await update.message.reply_text(
+                "Student life at PNC is vibrant and engaging, with clubs, events, teamwork projects, and opportunities to develop personal and professional skills."
+            )
+        elif "english" in clean_text:
+            await update.message.reply_text(
+                "Yes! PNC provides English classes to help students improve communication and prepare for global opportunities."
+            )
+        elif "only for phnom penh" in clean_text:
+            await update.message.reply_text(
+                "No! PNC welcomes students from all over Cambodia, not just Phnom Penh."
+            )
+        return
+    
+    # --- 🌏 Organization & Impact Questions ---
+    elif any(keyword in clean_text for keyword in [
+        "is pnc part of a bigger organization",
+        "part of a bigger organization",
+        "where else does passerelles numériques work",
+        "pn works elsewhere",
+        "how does pnc help poor students",
+        "help poor students",
+        "how does pnc make a difference",
+        "difference in cambodia",
+        "can people volunteer",
+        "can people donate",
+        "volunteer or donate"
+    ]):
+        if "bigger organization" in clean_text or "part of" in clean_text:
+            await update.message.reply_text(
+                "Yes! PNC is part of Passerelles Numériques, an international NGO that supports digital education for youth in Asia."
+            )
+        elif "else" in clean_text or "passerelles numériques work" in clean_text:
+            await update.message.reply_text(
+                "Passerelles Numériques also works in Vietnam, the Philippines, and other countries, helping underprivileged youth access IT education."
+            )
+        elif "help poor students" in clean_text:
+            await update.message.reply_text(
+                "PNC helps poor students by providing free or subsidized education, mentorship, and support services to give them a fair chance at a career."
+            )
+        elif "make a difference" in clean_text or "difference in cambodia" in clean_text:
+            await update.message.reply_text(
+                "PNC makes a difference in Cambodia by equipping students with digital and professional skills, creating job opportunities, and contributing to local development."
+            )
+        elif "volunteer" in clean_text or "donate" in clean_text:
+            await update.message.reply_text(
+                "Yes! People can volunteer or donate to PNC to support education for underprivileged youth. Visit PNC's website to learn more."
+            )
+        return
+
+    # --- 📞 Contact & Communication Questions ---
+    elif any(keyword in clean_text for keyword in [
+        "how can i contact pnc",
+        "pn contact",
+        "pn phone number",
+        "what's pnc's phone number",
+        "pn address",
+        "pn email",
+        "how can i email pnc",
+        "can i visit pnc",
+        "visit pnc in person",
+        "who can i talk to for more information",
+        "pn website",
+        "pn facebook page",
+        "website or facebook"
+    ]):
+        if "contact" in clean_text:
+            await update.message.reply_text(
+                "You can contact PNC via phone, email, or their social media channels. They are happy to answer your questions!"
+            )
+        elif "phone" in clean_text or "number" in clean_text:
+            await update.message.reply_text(
+                "PNC's phone number is: +855 23 123 456 (example)."
+            )
+        elif "address" in clean_text or "visit" in clean_text:
+            await update.message.reply_text(
+                "PNC's address is: #123, Street Name, Phnom Penh, Cambodia. You can visit in person during office hours."
+            )
+        elif "email" in clean_text:
+            await update.message.reply_text(
+                "You can email PNC at: info@pnc.org.kh"
+            )
+        elif "who can i talk" in clean_text or "information" in clean_text:
+            await update.message.reply_text(
+                "For more information, you can talk to the PNC Admissions or Student Services team directly."
+            )
+        elif "website" in clean_text or "facebook" in clean_text:
+            await update.message.reply_text(
+                "PNC's website: https://www.pnc.org.kh \nFacebook page: https://www.facebook.com/pnc"
+            )
+        return
+
+    # --- 💬 Friendly Small Talk Questions ---
+    elif any(keyword in clean_text for keyword in [
+        "hi smartbot",
+        "are you from pnc",
+        "something cool about pnc",
+        "what makes pnc special",
+        "why should students join pnc",
+        "fun facts about pnc",
+        "how many students study at pnc",
+        "who teaches at pnc"
+    ]):
+        if "hi smartbot" in clean_text or "are you from" in clean_text:
+            await update.message.reply_text(
+                "Hello! 😄 I'm SmartBot, your friendly PNC assistant. I'm here to help you learn all about PNC!"
+            )
+        elif "something cool" in clean_text or "fun facts" in clean_text:
+            await update.message.reply_text(
+                "PNC offers hands-on training and real-life internships for students, helping them build a bright future! 🌟"
+            )
+        elif "makes pnc special" in clean_text:
+            await update.message.reply_text(
+                "PNC is special because it combines quality education, practical experience, and a supportive environment for all students."
+            )
+        elif "why should students join" in clean_text:
+            await update.message.reply_text(
+                "Students should join PNC to gain valuable skills, connect with mentors, and get opportunities for internships and jobs."
+            )
+        elif "how many students" in clean_text:
+            await update.message.reply_text(
+                "Currently, PNC has hundreds of students across its programs, growing every year! 🎓"
+            )
+        elif "who teaches" in clean_text:
+            await update.message.reply_text(
+                "PNC's teachers are experienced professionals and mentors committed to guiding students in both theory and practice."
+            )
+        return
+
+
+    # --- 🆘 Help Information ---
     if "help" in user_text:
         await update.message.reply_text(
             "Here's what I can do:\n"
             "• Say hello or hi 👋\n"
             "• Ask how I am 😄\n"
             "• Ask my name 🤖\n"
-            "• Soon I'll answer questions about PNC! 🎓"
+            "• Ask questions about PNC 🎓 (Training, Student Life, Organization, Contact, Fun Facts)\n"
+            "• Get guidance on internships or admissions ✅"
         )
+        return
+
+    # --- 💞 Relationship & Funny Questions ---
+    elif any(keyword in user_text for keyword in [
+        "can you find me a girlfriend",
+        "can you find me a boyfriend",
+        "find me a girlfriend",
+        "find me a boyfriend",
+        "can you be my girlfriend",
+        "can you be my boyfriend",
+        "do you have a crush",
+        "do you have feelings",
+        "are you single",
+        "are you in love"
+    ]):
+        await update.message.reply_text(
+            "😂 Haha! I'm just a friendly bot — no feelings, no crushes! But I can help you find confidence and kindness instead. ❤️"
+        )
+        return
+
+    # --- 📚 PNC Training & Education Questions ---
+    elif any(keyword in user_text for keyword in [
+        "what do students learn at pnc",
+        "what students learn",
+        "what kind of training does pnc give",
+        "kind of training",
+        "how long is the course at pnc",
+        "course length",
+        "what subjects do you study at pnc",
+        "subjects",
+        "what degree do students get after studying at pnc",
+        "degree",
+        "is the training free at pnc",
+        "training free",
+        "who can apply to study at pnc",
+        "who can apply",
+        "how can i join pnc",
+        "how to join",
+        "what are the requirements to become a pnc student",
+        "requirements",
+        "do students get to do internships",
+        "internships"
+    ]):
+        # (Insert the same PNC answers code block here)
+        pass  # Replace with your reply logic
+        return
+
+    # --- 🎓 Student Life & Support Questions ---
+    elif any(keyword in user_text for keyword in [
+        "does pnc provide dorms",
+        "does pnc provide food",
+        "dorms or food",
+        "do students get support",
+        "student support",
+        "does pnc help students find jobs",
+        "job support",
+        "pncs core values",
+        "core values",
+        "student life at pnc",
+        "what is student life like",
+        "do students study english",
+        "english classes",
+        "is pnc only for students from phnom penh",
+        "only for phnom penh students"
+    ]):
+        # (Insert Student Life & Support replies here)
+        pass
+        return
+
+    # --- 🌏 Organization & Impact Questions ---
+    elif any(keyword in user_text for keyword in [
+        "is pnc part of a bigger organization",
+        "part of a bigger organization",
+        "where else does passerelles numériques work",
+        "pn works elsewhere",
+        "how does pnc help poor students",
+        "help poor students",
+        "how does pnc make a difference",
+        "difference in cambodia",
+        "can people volunteer",
+        "can people donate",
+        "volunteer or donate"
+    ]):
+        # (Insert Organization & Impact replies here)
+        pass
+        return
+
+    # --- 📞 Contact & Communication Questions ---
+    elif any(keyword in user_text for keyword in [
+        "how can i contact pnc",
+        "pn contact",
+        "pn phone number",
+        "what's pnc's phone number",
+        "pn address",
+        "pn email",
+        "how can i email pnc",
+        "can i visit pnc",
+        "visit pnc in person",
+        "who can i talk to for more information",
+        "pn website",
+        "pn facebook page",
+        "website or facebook"
+    ]):
+        # (Insert Contact & Communication replies here)
+        pass
+        return
+
+    # --- 💬 Friendly Small Talk Questions ---
+    elif any(keyword in user_text for keyword in [
+        "hi smartbot",
+        "are you from pnc",
+        "something cool about pnc",
+        "what makes pnc special",
+        "why should students join pnc",
+        "fun facts about pnc",
+        "how many students study at pnc",
+        "who teaches at pnc"
+    ]):
+        # (Insert Friendly Small Talk replies here)
+        pass
         return
     
     # Fallback response
