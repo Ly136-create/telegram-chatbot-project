@@ -11,7 +11,6 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Normalize text: lowercase + remove punctuation
     clean_text = re.sub(r'[^\w\s]', '', user_text.lower()).strip()
 
-
     # Greeting handler
     if any(keyword in clean_text for keyword in [
         "hi", 
@@ -33,7 +32,6 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         ]
         await update.message.reply_text(random.choice(responses))
         return
-    
     
     elif any(keyword in clean_text for keyword in [
         "how are you", 
@@ -144,7 +142,6 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "are fully supported. 🎓",
         )
         return
-
 
     # 3️ About the main organization
     elif any(keyword in clean_text for keyword in [
@@ -700,7 +697,6 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return
 
-
     elif any(keyword in clean_text for keyword in [
         "who is the most handsome trainer",
         "whos the most handsome trainer",
@@ -710,9 +706,6 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("😎 Definitely Mr. T. Yon Yen! The one and only handsome trainer at PNC! 💪")
         return
 
-
-
-
     elif any(keyword in clean_text for keyword in [
         "who is the prettiest student",
         "whos the prettiest student",
@@ -720,9 +713,6 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]):
         await update.message.reply_text("💖 Haha, every student at PNC is beautiful — both inside and out! 😄")
         return
-
-
-
 
     elif any(keyword in clean_text for keyword in [
         "can you find me a girlfriend",
@@ -733,9 +723,6 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("😂 Sorry, SmartBot isn't a dating app! But you can start by saying hi to your classmates 😉")
         return
 
-
-
-
     elif any(keyword in clean_text for keyword in [
         "is smartbot smarter than the trainers",
         "smartbot smarter than trainers",
@@ -744,9 +731,6 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("🤖 I might be smart, but the trainers at PNC taught me everything I know! 🧠💡")
         return
 
-
-
-
     elif any(keyword in clean_text for keyword in [
         "do you sleep",
         "do you sleep smartbot",
@@ -754,9 +738,6 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]):
         await update.message.reply_text("😴 I never sleep — I'm always here waiting for your questions 24/7!")
         return
-
-
-
 
     elif any(keyword in clean_text for keyword in [
         "can smartbot dance",
@@ -1065,7 +1046,7 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "tell me your girlfriend"
     ]):
         await update.message.reply_text(
-            "😂 Haha! I don’t have a boyfriend or girlfriend — I’m just a friendly bot! No feelings, no crushes, only kindness. ❤️"
+            "😂 Haha! I don'mt have a boyfriend or girlfriend — I'm just a friendly bot! No feelings, no crushes, only kindness. ❤️"
         )
         return
     
