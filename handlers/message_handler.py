@@ -472,17 +472,17 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return
     
-    # Who handsome 
+    # Who is handsome
     elif any(keyword in clean_text for keyword in [
-        "who is the handsome trainner",
+        "who is the handsome trainer",
         "who is handsome",
         "who is the most handsome",
-        "tell me who the most handsome"
+        "tell me who is the most handsome"
     ]):
         await update.message.reply_text(
-            "Amazing!, \n"
-            "Here is your handsome trainer.\n" 
-            "He's name is T.Yon Yen. 😄" 
+            "Haha 😄\n"
+            "You're talking about the handsome trainer?\n"
+            "That would be Mr. T. Yon Yen! 💪"
         )
         return
     
@@ -636,6 +636,511 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "Great!\n\n"
             "We provide technical training, professional and personal development training in our centers in Southeast Asia, and a preparatory program to university in our center in Madagascar. In our centers, we cover the basic needs of our students, including their wellbeing."
             "From their first day of school, until graduation and their first job, we support each of our students on their journey."
+        )
+        return
+    
+    # What does pnc do
+    elif any(keyword in clean_text for keyword in [
+        "what does pnc do",
+        "what does pnc do?",
+        "what do you do",
+        "what does passerelles numeriques do"
+    ]):
+        await update.message.reply_text(
+            "💡 PNC trains underprivileged youth in IT (software development and related skills) "
+            "to help them get quality jobs and build sustainable careers."
+        )
+        return
+    
+    # school or an organization
+    elif any(keyword in clean_text for keyword in [
+        "is pnc a school or an organization",
+        "is pnc a school",
+        "is pnc an organization",
+        "pnc school or organization"
+    ]):
+        await update.message.reply_text(
+            "🏫 PNC is an educational NGO (non-profit organization) that runs a school-like training program: "
+            "students study full-time for 2 years and receive an associate-level qualification."
+        )
+        return
+    
+    # PNC start
+    elif any(keyword in clean_text for keyword in [
+        "when did pnc start in cambodia",
+        "when did pnc start",
+        "when was pnc founded",
+        "when was pnc started"
+    ]):
+        await update.message.reply_text(
+            "🕰️ PNC started its program in Cambodia in 2005 (the international Passerelles Numériques initiative also began around that time)."
+        )
+        return
+    
+    # who started pnc
+    elif any(keyword in clean_text for keyword in [
+        "who started pnc",
+        "who founded pnc",
+        "who founded passerelles numeriques"
+    ]):
+        await update.message.reply_text(
+            "👩‍💼 Passerelles Numériques was founded by a group of French professionals who wanted to use education and technology to reduce poverty and create opportunities for youth."
+        )
+        return
+    
+    # pnc known for
+    elif any(keyword in clean_text for keyword in [
+        "what is pnc known for",
+        "what is pnc known for",
+        "what is pnc famous for",
+        "what is pnc known"
+    ]):
+        await update.message.reply_text(
+            "⭐ PNC is known for its free, high-quality IT training for motivated youth, strong support (housing, food, healthcare), and good track record in graduate employability."
+        )
+        return
+
+
+    elif any(keyword in clean_text for keyword in [
+        "who is the most handsome trainer",
+        "whos the most handsome trainer",
+        "who handsome trainer",
+        "handsome trainer pnc"
+    ]):
+        await update.message.reply_text("😎 Definitely Mr. T. Yon Yen! The one and only handsome trainer at PNC! 💪")
+        return
+
+
+
+
+    elif any(keyword in clean_text for keyword in [
+        "who is the prettiest student",
+        "whos the prettiest student",
+        "prettiest student pnc"
+    ]):
+        await update.message.reply_text("💖 Haha, every student at PNC is beautiful — both inside and out! 😄")
+        return
+
+
+
+
+    elif any(keyword in clean_text for keyword in [
+        "can you find me a girlfriend",
+        "can you find me a boyfriend",
+        "find girlfriend at pnc",
+        "find boyfriend at pnc"
+    ]):
+        await update.message.reply_text("😂 Sorry, SmartBot isn't a dating app! But you can start by saying hi to your classmates 😉")
+        return
+
+
+
+
+    elif any(keyword in clean_text for keyword in [
+        "is smartbot smarter than the trainers",
+        "smartbot smarter than trainers",
+        "are you smarter than trainers"
+    ]):
+        await update.message.reply_text("🤖 I might be smart, but the trainers at PNC taught me everything I know! 🧠💡")
+        return
+
+
+
+
+    elif any(keyword in clean_text for keyword in [
+        "do you sleep",
+        "do you sleep smartbot",
+        "smartbot sleep"
+    ]):
+        await update.message.reply_text("😴 I never sleep — I'm always here waiting for your questions 24/7!")
+        return
+
+
+
+
+    elif any(keyword in clean_text for keyword in [
+        "can smartbot dance",
+        "smartbot dance",
+        "do you dance"
+    ]):
+        await update.message.reply_text("🕺 Of course! I can dance with 1s and 0s — it's called the binary boogie! 💃")
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "who eats the most rice",
+        "who eat the most rice",
+        "most rice at pnc"
+    ]):
+        await update.message.reply_text("🍚 Hmm... probably the one who skips breakfast! Just kidding 😆")
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "if pnc were an animal",
+        "pnc animal",
+        "what animal is pnc"
+    ]):
+        await update.message.reply_text("🐘 I'd say an elephant — strong, wise, and full of memory, just like PNC students! 🧠")
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "do robots like noodles",
+        "smartbot like noodles",
+        "do you like noodles"
+    ]):
+        await update.message.reply_text("🍜 I can't eat noodles... but I can appreciate their code-like structure — long and connected! 😋")
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "can smartbot pass the pnc exam",
+        "smartbot pass pnc exam",
+        "can you pass pnc exam"
+    ]):
+        await update.message.reply_text("🧩 I'd try my best! But I think students would still beat me — they have human creativity ❤️")
+        return
+ 
+    # --- What is the training program at PNC ---
+    elif any(keyword in clean_text for keyword in [
+        "what is the training program at pnc",
+        "training program at pnc",
+        "pnc training program"
+    ]):
+        await update.message.reply_text(
+            "🎓 Passerelles Numériques Cambodia (PNC) offers a 2-year IT training program based on a holistic approach — combining technical, soft skills, and personal development training to prepare students for professional success. 💻"
+        )
+        return
+
+    # --- 2. How long is the IT training program at PNC ---
+    elif "how long is the it training program" in clean_text:
+        await update.message.reply_text(
+            "📅 The IT training program at PNC lasts 2 years — including academic learning, soft skills development, and a professional internship."
+        )
+        return
+
+    # --- What major does PNC offer ---
+    elif "what major does pnc offer" in clean_text:
+        await update.message.reply_text(
+            "💡 PNC offers an Associate Degree in Computer Science with a major in Software Development — focused on meeting the needs of the IT industry."
+        )
+        return
+
+    # --- What kind of support do students get ---
+    elif any(keyword in clean_text for keyword in [
+        "what kind of support do students get",
+        "does pnc provide housing",
+        "does pnc provide food",
+        "does pnc provide medical care"
+    ]):
+        await update.message.reply_text(
+            "🏠 At PNC, students' basic needs — housing, food, and medical care — are fully supported throughout their studies. 💖"
+        )
+        return
+
+    # --- Job rate ---
+    elif "what percentage of pnc graduates find a job" in clean_text:
+        await update.message.reply_text(
+            "💼 Over 95% of PNC graduates find skilled employment within 2-3 months after graduation — a strong indicator of the program's success!"
+        )
+        return
+
+    # --- Holistic approach ---
+    elif "what does holistic approach mean" in clean_text:
+        await update.message.reply_text(
+            "🌱 The holistic approach at PNC means developing not only IT skills but also soft skills, personal growth, and professional ethics — creating well-rounded graduates. 💪"
+        )
+        return
+
+    # --- Women students ---
+    elif "how many women students" in clean_text:
+        await update.message.reply_text(
+            "👩‍💻 PNC aims for gender balance — around 50% of students are women, promoting equal access to digital education. 💪"
+        )
+        return
+
+    # --- Selection process ---
+    elif "what is the selection process" in clean_text:
+        await update.message.reply_text(
+            "📝 The PNC selection process includes written tests, interviews, and home visits to ensure candidates are motivated and truly in need of financial support."
+        )
+        return
+
+    # --- Key skills ---
+    elif "what are the key skills" in clean_text:
+        await update.message.reply_text(
+            "💻 PNC students learn technical skills like programming, databases, and networking, as well as soft skills such as communication, teamwork, and critical thinking. 🤝"
+        )
+        return
+
+    # --- Internship ---
+    elif "what internship duration" in clean_text or "internship at pnc" in clean_text:
+        await update.message.reply_text(
+            "👨‍💼 PNC students complete a 4-6 month internship in IT companies — gaining real-world experience before graduation. 🚀"
+        )
+        return
+
+    # --- Countries ---
+    elif "which countries does passerelles numériques work" in clean_text:
+        await update.message.reply_text(
+            "🌏 Passerelles Numériques operates in three countries: Cambodia 🇰🇭, the Philippines 🇵🇭, and Vietnam 🇻🇳."
+        )
+        return
+    
+    # --- 💞 Relationship & Funny Questions ---
+    elif any(keyword in clean_text for keyword in [
+        "can you find me a girlfriend",
+        "can you find me a boyfriend",
+        "find me a girlfriend",
+        "find me a boyfriend",
+        "can you be my girlfriend",
+        "can you be my boyfriend",
+        "do you have a crush",
+        "do you have feelings",
+        "are you single",
+        "are you in love"
+    ]):
+        await update.message.reply_text(
+            "😂 Haha! I’m just a friendly bot — no feelings, no crushes! But I can help you find confidence and kindness instead. ❤️"
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "who is the prettiest student at pnc",
+        "who is the most handsome trainer at pnc",
+        "who is the prettiest girl",
+        "who is the most handsome guy"
+    ]):
+        await update.message.reply_text(
+            "😄 Everyone at PNC is awesome in their own way! Beauty comes from kindness, respect, and teamwork — the true PNC values. 💫"
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "do you love me",
+        "smartbot do you love me",
+        "do you like me"
+    ]):
+        await update.message.reply_text(
+            "💙 Of course I like you — as my favorite user! But love? Hmm... maybe we should just stay good friends 😉"
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "what is love",
+        "tell me about love",
+        "define love"
+    ]):
+        await update.message.reply_text(
+            "💞 Love is about care, respect, and understanding — not just words or emojis! Real love grows when people support each other. 💐"
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "who is your crush",
+        "who do you love",
+        "are you dating"
+    ]):
+        await update.message.reply_text(
+            "🤖 I don't date — my only focus is helping you and being your loyal SmartBot friend! 💪"
+        )
+        return
+    
+    # --- 👨‍👩‍👧‍👦 Family Questions ---
+    elif any(keyword in clean_text for keyword in [
+        "what is family",
+        "tell me about family",
+        "define family"
+    ]):
+        await update.message.reply_text(
+            "👨‍👩‍👧‍👦 Family is a group of people who love, support, and care for each other — usually parents, children, and relatives. ❤️"
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "why is family important",
+        "importance of family",
+        "why do we need family"
+    ]):
+        await update.message.reply_text(
+            "💞 Family is important because they give us love, protection, and guidance. They help us grow and never let us feel alone."
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "how many members are in your family",
+        "how many people in your family",
+        "tell me about your family members"
+    ]):
+        await update.message.reply_text(
+            "🤖 I don’t have a real family like humans, but if I did, you’d definitely be part of it! 💙"
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "who is the head of the family",
+        "family head",
+        "leader of the family"
+    ]):
+        await update.message.reply_text(
+            "👨‍👩‍👧 In most families, parents are the heads of the family. They make decisions and care for everyone."
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "what do you love about your family",
+        "what do you love most about your family"
+    ]):
+        await update.message.reply_text(
+            "💗 The best thing about family is the love, support, and laughter you share together!"
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "what do family members do together",
+        "family activities",
+        "what do you do with your family"
+    ]):
+        await update.message.reply_text(
+            "🎉 Families often eat together, play, travel, and celebrate special days. Spending time together builds strong relationships!"
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "how can we make our family happy",
+        "make family happy",
+        "how to make family happy"
+    ]):
+        await update.message.reply_text(
+            "😊 You can make your family happy by being kind, respectful, helpful, and showing gratitude every day."
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "what should we do if family members argue",
+        "if family members argue",
+        "family conflict"
+    ]):
+        await update.message.reply_text(
+            "🕊️ If your family argues, stay calm, listen to each other, and talk kindly. Understanding and forgiveness solve most problems."
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "what are family values",
+        "family values",
+        "important values in family"
+    ]):
+        await update.message.reply_text(
+            "💎 Family values include love, honesty, respect, responsibility, and kindness. These guide how family members treat each other."
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "what makes a good family",
+        "good family",
+        "describe a good family"
+    ]):
+        await update.message.reply_text(
+            "🌟 A good family cares, communicates, supports one another, and always stands together during good and bad times."
+        )
+        return
+
+    # --- 🤝 Friendship Questions ---
+    elif any(keyword in clean_text for keyword in [
+        "what is friendship",
+        "tell me about friendship",
+        "define friendship"
+    ]):
+        await update.message.reply_text(
+            "🤝 Friendship means a close and trusting relationship between people who care for and support each other. 💙"
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "why are friends important",
+        "importance of friends",
+        "why do we need friends"
+    ]):
+        await update.message.reply_text(
+            "🌟 Friends are important because they make us happy, support us in hard times, and help us grow as better people."
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "what makes a good friend",
+        "qualities of a good friend",
+        "how to be a good friend"
+    ]):
+        await update.message.reply_text(
+            "💖 A good friend is kind, honest, loyal, and always there when you need them. True friends celebrate your success and help you when you fail."
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "how can i make new friends",
+        "how to make friends",
+        "tips to make friends"
+    ]):
+        await update.message.reply_text(
+            "😊 Be kind, listen to others, smile, and show respect. Join activities or groups that match your interests — friendship starts with small talks!"
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "how do we keep our friendship strong",
+        "how to keep friendship strong",
+        "keep friends forever"
+    ]):
+        await update.message.reply_text(
+            "💫 Stay honest, communicate often, forgive mistakes, and appreciate each other. Friendship grows when you care and stay connected."
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "what should i do if i argue with my friend",
+        "if i argue with my friend",
+        "when friends fight"
+    ]):
+        await update.message.reply_text(
+            "🕊️ Stay calm, talk about your feelings, and listen to your friend’s side. Apologize if you’re wrong — forgiveness is stronger than pride."
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "what are the qualities of a true friend",
+        "true friend qualities",
+        "how to know a true friend"
+    ]):
+        await update.message.reply_text(
+            "🌻 A true friend is someone who accepts you for who you are, tells you the truth, supports your dreams, and never gives up on you."
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "can boys and girls be best friends",
+        "can boys and girls be friends",
+        "boy girl friendship"
+    ]):
+        await update.message.reply_text(
+            "🙌 Of course! Boys and girls can be great friends as long as they respect and trust each other. Friendship has no gender. 💛"
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "is smartbot my friend",
+        "are you my friend",
+        "can we be friends"
+    ]):
+        await update.message.reply_text(
+            "😄 Absolutely! I’m your friendly SmartBot — always here to chat, help, and support you like a real friend. 🤗"
+        )
+        return
+
+    elif any(keyword in clean_text for keyword in [
+        "do you have friends",
+        "who are your friends",
+        "smartbot friends"
+    ]):
+        await update.message.reply_text(
+            "🤖 My best friends are all my users — especially you! I learn something new from every chat we have. 💬"
         )
         return
     
