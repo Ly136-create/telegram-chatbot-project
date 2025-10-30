@@ -53,6 +53,39 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(random.choice(responses))
         return
 
+    # Respone Greeting 
+    elif any(keyword in clean_text for keyword in [
+        "im good",
+        "im good, thanks",
+        "im going well",
+        "i am going well",
+        "im fine",
+        "im fine, thank you",
+        "im fine, thanks",
+        "it is very good",
+        "im great"
+    ]):
+        responses = [
+            "Amazing! Let's start discussion together.",
+            "Great! Let's tell, How can I help you?",
+            "Good! Let's start your question.",
+            "Very Good! Let's go with your question."
+        ]
+        await update.message.reply_text(random.choice(responses))
+        return
+    
+    # How many tree
+    elif any(keyword in clean_text for keyword in [
+        "how many tree in pnc",
+        "count tree in pnc",
+        "tree in pnc"
+    ]):
+        await update.message.reply_text(
+            "Nice!\n\n"
+            "I'm not sure.\n"
+            "Please, Go down stair and count it by yourself.😄"
+        )
+        return
     
     elif any(keyword in clean_text for keyword in [
         "what is your name", "who are you", "tell me about yourself", "introduce yourself"
@@ -529,8 +562,7 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "17. Generations 2023\n"
             "18. Generations 2024\n"
             "19. Generations 2025\n"
-            "20. Generations 2026\n"
-            "Do you have any question?😁"
+            "20. Generations 2026"
         )
         return
     
@@ -627,5 +659,5 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(random.choice(fallback_responses))
 
 
-# ✅ Add this line at the very end:
+# Add this line at the very end:
 logic_handler = MessageHandler(filters.TEXT & ~filters.COMMAND, logic_reply)
