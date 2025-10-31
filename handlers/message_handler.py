@@ -187,7 +187,8 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "pnc location",
         "location of pnc",
         "pnc address",
-        "address pnc"
+        "address pnc",
+        "where pnc"
     ]):
         await update.message.reply_text(
             "📍 Passerelles Numériques Cambodia (PNC) is located at:\n"
@@ -195,7 +196,91 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "Sangkat Tek Thla, Khan Sen Sok, Phnom Penh, Cambodia. 🇰🇭"
         )
         return
+    
+    # --- 💻 Subjects & Programming Languages at PNC ---
+    elif any(keyword in clean_text for keyword in [
+        "what subject do you study at pnc",
+        "what subjects do you study at pnc",
+        "what programming language do you learn at pnc",
+        "what programming languages do you learn at pnc",
+        "subjects at pnc",
+        "languages at pnc",
+        "programming at pnc"
+    ]):
+        responses = [
+            "💻 At PNC, students study subjects like IT, English, math, and soft skills for personal growth!",
+            "🧠 Students learn programming languages such as Python, HTML, CSS, JavaScript, and SQL.",
+            "🎓 PNC offers training in software development, networking, and system administration.",
+            "🚀 You’ll study both technical and communication skills — everything to become a great IT professional!"
+        ]
+        await update.message.reply_text(random.choice(responses))
+        return
+    
+    # smart bot's partner
+    elif any(keyword in clean_text for keyword in [
+        "who is your partner",
+        "who your partner",
+        "tell your partner",
+        "tell me your partner"
+    ]):
+        responses = [
+        "💻 My partner is the internet — we’re always connected! 😂",
+        "🤖 I don’t have a partner, but teamwork with humans like you makes me smarter!",
+        "❤️ My only partner is knowledge and kindness!",
+        "😂 Haha! I’m single — just focusing on helping people for now!"
+        ]
+        await update.message.reply_text(random.choice(responses))
+        return
+    
 
+    # Skills at PNC
+    elif any(keyword in clean_text for keyword in [
+        "what is skill at pnc",
+        "what skills do students learn at pnc",
+        "what are the skills at pnc",
+        "skills at pnc",
+        "what skill can i learn at pnc"
+    ]):
+        responses = [
+            "💻 At PNC, students learn technical skills like programming, networking, and system administration!",
+            "🎓 PNC students develop IT skills such as web development, databases, and problem-solving.",
+            "🧠 Besides tech, PNC also trains students in English, communication, and soft skills for work and life!",
+            "🚀 PNC focuses on both technical and personal development — preparing students for great IT careers!"
+        ]
+        await update.message.reply_text(random.choice(responses))
+        return
+    
+    # the most smart bot like
+    elif any(keyword in clean_text for keyword in [
+        "who do you like",
+        "who you like the most",
+        "do yo like me"
+    ]):
+        responses = [
+            "😄 I like everyone who chats with me — including you!",
+        "🤖 I don’t have human feelings, but I think you’re awesome!",
+        "❤️ If being kind counts as liking someone, then yes — I like you!",
+        "😂 I’m just a bot, but you’re definitely one of my favorites!"
+        ]
+
+        await update.message.reply_text(random.choice(responses))
+        return
+    
+    # where smart bot live
+    elif any(keyword in clean_text for keyword in [
+        "where are you",
+        "where are you now",
+        "where are you live",
+        "where do you live"
+    ]):
+        responses = [
+            "🌍 I'm living in the digital world — always online and ready to chat with you! 😄",
+            "🏫 I'm living at PNC, surrounded by smart students and awesome teachers! 💻",
+            "☁️ Somewhere in the cloud... but always close to you! 😉"
+        ]
+        await update.message.reply_text(random.choice(responses))
+        return
+    
     # 📞 Contact PNC
     elif any(keyword in clean_text for keyword in [
         "how can i contact pnc",
