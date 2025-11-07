@@ -198,7 +198,7 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
     
     # --- 💻 Subjects & Programming Languages at PNC ---
-    elif any(keyword in clean_text for keyword in [
+    elif any(keyword in clean_text for keyword in [  
         "what subject do you study at pnc",
         "what subjects do you study at pnc",
         "what programming language do you learn at pnc",
@@ -208,7 +208,7 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "programming at pnc"
     ]):
         responses = [
-            "💻 At PNC, students study subjects like IT, English, math, and soft skills for personal growth!",
+            "💻 At PNC, students study subjects like IT, English, and soft skills for personal growth!",
             "🧠 Students learn programming languages such as Python, HTML, CSS, JavaScript, and SQL.",
             "🎓 PNC offers training in software development, networking, and system administration.",
             "🚀 You’ll study both technical and communication skills — everything to become a great IT professional!"
@@ -239,7 +239,8 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "what skills do students learn at pnc",
         "what are the skills at pnc",
         "skills at pnc",
-        "what skill can i learn at pnc"
+        "what skill can i learn at pnc",
+        "what are pnc skills"
     ]):
         responses = [
             "💻 At PNC, students learn technical skills like programming, networking, and system administration!",
@@ -597,7 +598,10 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # All trainer at PNC
     elif any(keyword  in clean_text for keyword in [
-
+        "how many trainer at pnc",
+        "tell me all trainer at pnc",
+        "give me all trainer",
+        "all trainer at pnc"
     ]):
         await update.message.reply_text(
             "Great!\n"
