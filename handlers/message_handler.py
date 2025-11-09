@@ -584,6 +584,7 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "and Hou Lavy"
         )
         return
+    
     # PL Trainer
     elif any(keyword in clean_text for keyword in [
         "how many pl trainer",
@@ -595,7 +596,8 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "Great!\n"
             "There is only Puthy Kry of Professional Life trainer."
         )
-
+        return
+    
     # All trainer at PNC
     elif any(keyword  in clean_text for keyword in [
         "how many trainer at pnc",
@@ -612,7 +614,8 @@ async def logic_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "4. Education trainers are 5.\n"
             "Thank you, for your question.😁"
         )
-
+        return
+    
     # All generation 
     elif any(keyword  in clean_text for keyword in [
         "how many generations does pnc have",
